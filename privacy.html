@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>audio2report 隱私權政策</title>
+<meta name="description" content="audio2report 隱私權政策 / Privacy Policy">
+<style>
+  :root {
+    --bg: #faf9f5; --text: #1f1e1b; --muted: #5f5d57; --accent: #b4532a;
+    --line: #e4e1d6; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1c1b19; --text: #ecebe6; --muted: #a8a59c; --accent: #e08a5f;
+            --line: #34322d; --card: #252421; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+         line-height: 1.75; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; color: var(--accent); }
+  .meta { color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 1.1rem; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  ul { padding-left: 1.4em; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 4px 20px 16px; margin-top: 40px; }
+  .card h2 { border-bottom: none; }
+  .en { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); word-break: break-word; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>audio2report 隱私權政策</h1>
+  <p class="meta">生效日期：2026 年 11 月 14 日</p>
+
+  <h2>適用範圍</h2>
+  <p>audio2report（以下稱「本工具」）是開發者自己使用的會議錄音整理工具，不對外提供服務。本政策說明本工具如何存取與處理透過 Google OAuth 授權取得的 Google 使用者資料。</p>
+
+  <h2>存取的資料</h2>
+  <p>本工具請求 Google Drive 存取權限（<code>https://www.googleapis.com/auth/drive</code>），實際只用於使用者本人 Google Drive 中指定的會議資料夾：</p>
+  <ul>
+    <li>讀取「會議錄音」資料夾中的音檔清單與音檔內容。</li>
+    <li>在「未歸檔」資料夾建立子資料夾，並上傳本工具產生的會議紀錄。</li>
+    <li>將已處理的音檔移到對應的歸檔資料夾。</li>
+  </ul>
+  <p>本工具不會讀取、修改或刪除上述資料夾以外的檔案，也不會存取 Google 帳戶中的其他資料（例如 Gmail、通訊錄、日曆）。</p>
+
+  <h2>資料的使用方式</h2>
+  <ul>
+    <li>音檔只在使用者本人的電腦上暫存，並交由 Google NotebookLM 分析以產生會議摘要與逐字稿；處理完成後即刪除本機暫存檔。</li>
+    <li>產生的會議紀錄只存回使用者本人的 Google Drive。</li>
+    <li>OAuth 授權憑證只儲存在使用者本人的電腦上，不會上傳到任何伺服器。</li>
+  </ul>
+
+  <h2>資料分享</h2>
+  <p>本工具沒有自己的伺服器或資料庫，不會將任何資料出售、出租或分享給第三方。資料只會在使用者本人的電腦、使用者的 Google Drive 與 Google NotebookLM 之間傳遞。</p>
+
+  <h2>遵守 Google API 服務使用者資料政策</h2>
+  <p>本工具使用與傳輸從 Google API 取得的資訊時，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服務使用者資料政策</a>，包括其中的「有限使用（Limited Use）」規定。本工具不會將 Google 使用者資料用於廣告，也不會用來開發、改進或訓練通用的人工智慧或機器學習模型。</p>
+
+  <h2>撤銷授權與資料刪除</h2>
+  <p>可隨時到 <a href="https://myaccount.google.com/permissions">Google 帳戶的第三方存取權設定</a>移除 audio2report 的存取權。移除後本工具即無法再存取 Google Drive。已產生的會議紀錄存放在使用者自己的 Google Drive，可自行刪除。</p>
+
+  <h2>政策變更</h2>
+  <p>本政策如有變更，會更新本頁內容與上方的生效日期。</p>
+
+  <h2>聯絡方式</h2>
+  <p><a href="mailto:gemini.kentteng@gmail.com">gemini.kentteng@gmail.com</a></p>
+
+  <div class="card en">
+    <h2>English summary</h2>
+    <p><strong>Effective date:</strong> November 14, 2026</p>
+    <p>audio2report is a personal tool used only by its developer. It requests Google Drive access
+      (<code>https://www.googleapis.com/auth/drive</code>) solely to read meeting recordings from a designated
+      folder in the user's own Drive, upload the generated meeting notes to a designated archive folder, and move
+      processed recordings into that archive folder. It does not access any other Drive files or any other Google data.</p>
+    <p>Recordings are temporarily stored on the user's own computer, analyzed with Google NotebookLM, and deleted
+      locally after processing. Generated notes are saved only to the user's own Google Drive. OAuth tokens are stored
+      only on the user's computer. No data is sold, rented, or shared with third parties.</p>
+    <p>audio2report's use and transfer of information received from Google APIs adheres to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements. Google user data is not used for advertising or to develop, improve, or
+      train generalized AI/ML models.</p>
+    <p>Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+      Contact: <a href="mailto:gemini.kentteng@gmail.com">gemini.kentteng@gmail.com</a></p>
+  </div>
+
+  <footer>
+    <a href="index.html">← 回到首頁 / Home</a>
+  </footer>
+</main>
+</body>
+</html>

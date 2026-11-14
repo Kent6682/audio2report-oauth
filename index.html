@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>audio2report</title>
+<meta name="description" content="audio2report：個人使用的會議錄音自動整理工具 / A personal tool that turns meeting recordings into structured notes.">
+<style>
+  :root {
+    --bg: #faf9f5; --text: #1f1e1b; --muted: #5f5d57; --accent: #b4532a;
+    --line: #e4e1d6; --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1c1b19; --text: #ecebe6; --muted: #a8a59c; --accent: #e08a5f;
+            --line: #34322d; --card: #252421; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", system-ui, sans-serif;
+         line-height: 1.75; }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; margin: 0 0 4px; color: var(--accent); }
+  .tagline { color: var(--muted); margin: 0 0 32px; }
+  h2 { font-size: 1.15rem; margin: 32px 0 8px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+  ol, ul { padding-left: 1.4em; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; margin-top: 32px; }
+  .en { color: var(--muted); font-size: 0.95rem; }
+  a { color: var(--accent); }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>audio2report</h1>
+  <p class="tagline">個人使用的會議錄音自動整理工具</p>
+
+  <h2>這是什麼</h2>
+  <p>audio2report 是開發者自己使用的自動化工具，不對外提供服務，也不開放他人註冊或使用。它會讀取開發者本人 Google Drive 指定資料夾中的會議錄音，交由 Google NotebookLM 分析後，產生會議摘要、待辦事項與逐字稿，再存回同一個 Google Drive。</p>
+
+  <h2>運作流程</h2>
+  <ol>
+    <li>從 Google Drive「會議錄音」資料夾讀取音檔。</li>
+    <li>在開發者自己的電腦上，將音檔交由 Google NotebookLM 分析。</li>
+    <li>將產生的會議紀錄（Markdown、純文字、PDF）上傳到 Google Drive「未歸檔」資料夾，並把原始音檔移到同一個歸檔資料夾。</li>
+  </ol>
+
+  <h2>Google Drive 存取權限</h2>
+  <p>本工具透過 Google OAuth 取得 Google Drive 存取權，僅用於上述流程中的讀取音檔、建立資料夾、上傳會議紀錄與搬移音檔。詳細說明請見<a href="privacy.html">隱私權政策</a>。</p>
+
+  <div class="card en">
+    <strong>English</strong><br>
+    audio2report is a personal automation tool used only by its developer; it is not offered to the public.
+    It reads meeting recordings from specific folders in the developer's own Google Drive, analyzes them with
+    Google NotebookLM on the developer's computer, and saves the resulting meeting notes back to the same Google Drive.
+    Google Drive access is used solely for this workflow. See the <a href="privacy.html">Privacy Policy</a>.
+  </div>
+
+  <h2>聯絡方式 / Contact</h2>
+  <p><a href="mailto:gemini.kentteng@gmail.com">gemini.kentteng@gmail.com</a></p>
+
+  <footer>
+    <a href="privacy.html">隱私權政策 / Privacy Policy</a>
+  </footer>
+</main>
+</body>
+</html>
